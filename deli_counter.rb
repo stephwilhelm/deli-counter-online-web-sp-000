@@ -18,5 +18,10 @@ def take_a_number(deli, name)
 end
 
 def now_serving(deli)
-  puts "Currently serving #{deli.shift}"
+  if deli.empty?
+    puts "TThere is nobody waiting to be served!"
+  else
+    puts "Currently serving #{deli.first}"
+    deli.shift
+  end
 end
